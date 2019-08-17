@@ -1122,9 +1122,9 @@ const Interfaz = (function() {
             */
             decodificaCentro: codigo => this.g.Centro.get(codigo).getData().id.nom,
             hayNoVisibles: function(attr) {
-               return this.ocultarBorrado && this[attr].length > this[attr].total;
+               return this.ocultarBorrado && this[attr].correctable.length > this[attr].length;
             },
-            // Devuelve el númerod de miembros de la plantilla orgánica.
+            // Devuelve el número de miembros de la plantilla orgánica.
             organica: function(org, norg) {
                return norg === undefined || norg === org?org:`${org} (${norg})`;
             }
