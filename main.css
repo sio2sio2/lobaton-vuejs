@@ -1,0 +1,135 @@
+html { height: 100%; }
+body {
+   margin: 0; padding: 0;
+   height: 100%;
+}
+#map {
+  margin: 0;
+  padding: 0;
+  height: 100%
+}
+
+.filtered {
+   filter: grayscale(100%);
+}
+
+#view-sidebar {
+   line-height: 40px;
+   width: 40px;
+   box-sizing: border-box;
+}
+
+.leaflet-sidebar-tabs {
+   overflow-y: auto;
+}
+
+#sidebar .leaflet-sidebar-pane article {
+   padding: 10px;
+}
+
+#info .card {
+   margin-left: -10px;
+}
+
+#centro {
+   margin-left: -10px;
+}
+
+#centro h1 {
+   margin-left: 0;
+}
+
+/* Cajetín de búsqueda */
+#busqueda li {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#busqueda li:hover {
+   cursor: pointer;
+   background-color: #0074d9;
+   color: #fff;
+}
+
+#busqueda data {
+   display: flex;
+   justify-content: space-between;
+}
+/* Fin cajetín */
+
+/* Elimina la flecha del input con sugerencias */
+#esp input::-webkit-calendar-picker-indicator,
+#esp input[type=number]::-webkit-list-button {
+   display: none;
+}
+
+.leaflet-sidebar-content {
+   font-family: Roboto, sans-serif;
+}
+
+/* Filtros y ajustes */
+.custom-switch .custom-switch-input:checked + .custom-switch-btn {
+   background: #0074d9;
+}
+
+.custom-switch .custom-switch-input:checked:disabled + .custom-switch-btn {
+   background: rgba(0, 116, 217,.4);
+}
+
+#correcciones input[type=number]::-webkit-outer-spin-button,
+#correcciones input[type=number]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+#correcciones input[type=number] {
+   -moz-appearance: textfield;
+}
+
+/* Estilos normales */
+.tachado {
+   text-decoration: line-through;
+}
+
+#centro .compensatoria {
+   color: #13b;
+}
+
+#centro .dificil {
+   color: #c13;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .leaflet-sidebar {
+        width: 350px;
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .leaflet-sidebar {
+        width: 100vw;
+    }
+
+    .leaflet-sidebar.leaflet-touch {
+       border-right: none;
+    }
+}
+
+
+@media (max-height: 400px) {
+   /* Corrección de bug visual que hacía que los iconos de la barra lateral se superpusieran unos a otros */
+   .leaflet-sidebar-tabs, .leaflet-sidebar-tabs > ul {
+      position: relative;
+   }
+}
