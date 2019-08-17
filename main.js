@@ -44,7 +44,7 @@ const Interfaz = (function() {
          unclusterZoom: 13,
          autostatus: false,
          search: false,
-         pathLoc: "../../json/localidades.json",
+         pathLoc: "json/localidades.json",
          ors: {
             key: "5b3ce3597851110001cf62489d03d0e912ed4440a43a93f738e6b18e",
          }
@@ -286,7 +286,7 @@ const Interfaz = (function() {
          },
          created: function() {
             L.utils.load({
-               url: "../../json/especialidades.json",
+               url: "json/especialidades.json",
                callback: xhr => {
                   const esp = JSON.parse(xhr.responseText),
                         todas = {590: {}, 591: {}};
@@ -314,7 +314,7 @@ const Interfaz = (function() {
                   // ¿Para qué vamos a borrar los datos si es la misma especialidad?
                   if(codigo !== this.especialidad) {
                      this.interfaz.g.cluster.clearCentros();
-                     this.interfaz.g.agregarCentros(`../../json/${codigo}.json`);
+                     this.interfaz.g.agregarCentros(`json/${codigo}.json`);
                      this.interfaz.g.Centro.reset();
                      this.interfaz.g.seleccionado = null;
                      this.interfaz.g.setRuta(null);
