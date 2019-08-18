@@ -1,6 +1,6 @@
 Mapa de adjudicaciones y oferta educativa
 ******************************************
-La aplicación (basada en Leaflet.mutatismutadis_ y `lobaton/core`_) presenta
+La aplicación (basada en `Leaflet.mutatismutadis`_ y `@lobaton/core`_) presenta
 un mapa con los centros públicos de Andalucía en los que se incluye su oferta
 educativa y las adjudicaciones del último procedimiento de colocación de
 efectivos.
@@ -77,8 +77,8 @@ los puestos relacionados con la especialidad:
 
 .. image:: docs/images/seleccionado2.png
 
-Estado el mapa
-==============
+Estado del mapa
+===============
 El estado del mapa puede consultarse pinchando sobre el icono de información y
 presenta información sustanciosa sobre el propio mapa:
 
@@ -436,10 +436,10 @@ FAQ
    ni en la consulta de la información de los centros o en la aplicación o
    remoción de filtros y correcciones a los datos; pero las isocronas, el
    cálculo de rutas y la obtención de la dirección postal del origen usan la
-   |API| de OpenRouteService_ que sí tiene `restricciones al uso
+   API de OpenRouteService_ que sí tiene `restricciones al uso
    <https://openrouteservice.org/plans/>`_. En la sección de estadísticas del
    `estado del mapa`_ hay un contador con las consultas que hemos hecho durante
-   la sesión a la |API| de OpenRouteService_.  Moderarse en el uso de estas
+   la sesión a la API de OpenRouteService_.  Moderarse en el uso de estas
    consultas es conveniente para que no se alcance la limitación diaria.
 
 #. **¿Qué fiabilidad tiene esto?**
