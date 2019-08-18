@@ -1138,9 +1138,22 @@ const Interfaz = (function() {
 
       var draggable = window.vuedraggable;
 
-      this.g.on("modeset", e => {
-         
+      // Issue #B.1
+      this.g.on("modeset", e => solApp.$children[0].checked = e.newval === "solicitud");
+      var oldmode = undefined;
+      window.addEventListener("keydown", e => {
+         if(e.key !== "Control" || this.g.mode === "solicitud" || oldmode) return;
+         oldmode = this.g.mode;
+         this.g.mode = "solicitud";
       });
+      window.addEventListener("keyup", e => {
+         console.log(e.key !== "Control", oldmode);
+         if(e.key !== "Control" || !oldmode) return;
+         this.g.mode = oldmode;
+         oldmode = undefined;
+      });
+      // Fin issue #B.1
+
 
       this.g.on("dataloaded", e=> {
          updateListado();
