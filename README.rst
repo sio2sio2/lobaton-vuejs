@@ -1,6 +1,6 @@
 Mapa de adjudicaciones y oferta educativa
 ******************************************
-La aplicación (basada en `Leaflet.mutatismutadis`_ y `@lobaton/core`_) presenta
+La aplicación (basada en `Leaflet.mutatismutandis`_ y `@lobaton/core`_) presenta
 un mapa con los centros públicos de Andalucía en los que se incluye su oferta
 educativa y las adjudicaciones del último procedimiento de colocación de
 efectivos.
@@ -70,6 +70,8 @@ no hubiera datos cargados. No obstante, el icono que permite mostrar la
 información de centro, sólo está habilitado si hay un centro seleccionado; si
 se deselecciona pinchando otra vez sobre el propio centro seleccionado, el
 panel se cerrará y el icono volverá a deshabilitarse.
+
+.. _panel de centro:
 
 La información de centro presenta los datos del centro, sus plantillas, las
 enseñanzas relevantes para la especialidad seleccionada y las adjudicaciones a
