@@ -317,7 +317,9 @@ peticiones de destinos:
 
 Para ello es necesario:
 
-- Activar el modo solicitud.
+- Activar el modo solicitud, o bien en dispositivos con teclado, dejar pulsado
+  ``Ctrl`` que activará dicho modo durante el tiempo que se mantenga pulsada la
+  tecla.
 - Comenzar a pinchar sobre los centros, que se quieren seleccionar. Al hacerlo
   en modo solicitud, éstos se van añadiendo al final de la lista.
 - Es posible, además, hacer aparecer marcas en el mapa para las localidades

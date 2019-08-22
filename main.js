@@ -58,7 +58,7 @@ const Interfaz = (function() {
       // Fin issue #62
 
       // Objeto de manipulación del mapa.
-      this.g = lobaton(opts);
+      this.g = Lo.lobaton(opts);
 
       initialize.call(this);
       createSidebar.call(this);
@@ -297,7 +297,6 @@ const Interfaz = (function() {
                   this.todas = todas;
                },
                failback: xhr => {
-                  console.log(xhr);
                   throw new Error("No es posible cargar las especialidades disponibles");
                }
             });
@@ -1147,7 +1146,6 @@ const Interfaz = (function() {
          this.g.mode = "solicitud";
       });
       window.addEventListener("keyup", e => {
-         console.log(e.key !== "Control", oldmode);
          if(e.key !== "Control" || !oldmode) return;
          this.g.mode = oldmode;
          oldmode = undefined;
