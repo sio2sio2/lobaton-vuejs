@@ -285,7 +285,7 @@ const Interfaz = (function() {
             }
          },
          created: function() {
-            L.utils.load({
+            L.Mutable.utils.load({
                url: "json/especialidades.json",
                callback: xhr => {
                   const esp = JSON.parse(xhr.responseText),
@@ -804,8 +804,8 @@ const Interfaz = (function() {
                   opt: "mostrarFiltrados",
                   tipo: "visual",
                   accion: (name, value) => {
-                     value = true?L.utils.grayFilter:this.g.cluster;
-                     this.g.Centro.setFilterStyle(value);
+                     const estilo = value?L.Mutable.utils.grayFilter:this.g.cluster;
+                     this.g.Centro.setFilterStyle(estilo);
                   }
                },
                {
